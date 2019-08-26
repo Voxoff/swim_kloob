@@ -9,6 +9,7 @@ html {
   width: 100%;
 }
 
+/* BANNER */
 h1 {
   color: #dfd4cfb5;
   margin-top: 0px;
@@ -49,6 +50,8 @@ h1 {
   }
 }
 
+/* AFTER BANNER */
+
 #logo {
   position: absolute;
   height: 50px;
@@ -59,13 +62,11 @@ h1 {
 
 #main-text {
   text-align: justify;
-  width: 50%;
-  float: left;
-  padding: 3%;
+  padding: 30px;
 }
 #side-image {
-  float: right;
-  width: 44%;
+  /* float: right; */
+  /* width: 44%; */
 }
 
 #first-image {
@@ -73,7 +74,7 @@ h1 {
   width: 100%;
 }
 
-@media(max-width: 700px){
+/* @media(max-width: 700px){
   #main-text {
     padding: 30px;
     text-align: justify;
@@ -94,11 +95,12 @@ h1 {
     justify-content: center;
     padding: 0px;
   }
-}
+} */
 
 #footer {
   width: auto;
-  clear: both; /* Floats are weird huh? */
+  margin-top: 50px;
+  justify-content: space-between;
   height: 30px;
   background: linear-gradient(0, #8e8e8e94 10%, 51%, #F0FFFF ); /* ... */
   display: flex;
@@ -120,37 +122,12 @@ h1 {
   opacity: 1;
 }
 
-//color scheme
-
-//Define text styles
-
-/*
-.carousel {
-  background: #FAFAFA;
-}
-
-.carousel-cell {
-  width: 66%;
-  height: 400px;
-  margin-right: 10px;
-  background: #333;
-}
-
-.carousel-cell-image {
-  display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-} */
-
+/* CAROUSEL */
 
 .carousel {
   background: #EEE;
 }
-
+/*
 .carousel img {
   display: block;
   height: 200px;
@@ -160,7 +137,7 @@ h1 {
   .carousel img {
     height: 400px;
   }
-}
+} */
 
 .carousel-cell {
   width: 66%;
@@ -176,4 +153,39 @@ h1 {
   max-width: 100%;
   -webkit-transition: opacity 0.4s;
           transition: opacity 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+
+@media(max-width: 989px){
+  .flickity-page-dots{
+    display: none;
+  }
+}
+@media(max-width: 900px){
+  .carousel-cell {
+    height: 350px;
+  }
+}
+/*
+@media(max-width: 800px){
+  .carousel-cell {
+    height: 300px;
+  }
+}
+
+
+@media(max-width: 700px){
+    .carousel-cell {
+    height: 250px;
+  }
+}
+
+@media(max-width: 600px){
+    .carousel-cell {
+    height: 200px;
+  }
+} */

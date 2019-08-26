@@ -13,7 +13,7 @@
       <img id="logo" src="{{ url_for('static', filename='logo.png') }}">
       <div id="caption"><h1> Rhosneigr Swim Kloob</h1></div>
     </div>
-    <!-- <div id="main-content">
+    <div id="main-content">
       <div id='main-text'>
         <p> Welcome fellow swim kloob members, </p>
         <p>Casting aside the temptations of maritime technology, the Rhosneigr Swim Kloob offers the simple pleasure of a short dip
@@ -21,22 +21,16 @@
         bathers looking to work out in the water.</p>
         <p>Following a wave of enthusiasm, the tide is turning: where once there was the RBA, now there is the RSK.</p>
       </div>
-      <div id="side-image">
-        <img id="first-image" src="{{ url_for('static', filename='images/first_swim.jpeg') }}">
-      </div>
-    </div> -->
-    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+    </div>
+    <div class="main-carousel" data-flickity='{ "contain": true, "wrapAround": true }'>
       {% for image in images %}
         <div class="carousel-cell"><img class="carousel-cell-image" src="{{ url_for('static', filename=image) }}" alt=""></div>
       {% endfor %}
-
-      <!-- <div class="carousel-cell"><img class="carousel-cell-image" src="{{ url_for('static', filename='images') }}" alt=""></div> -->
-      <!-- <div class="carousel-cell"><img class="carousel-cell-image" src="{{ url_for('static', filename='images') }}" alt=""></div> -->
     </div>
-    <!-- <div id="footer">
+    <div id="footer">
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fab fa-github fa-lg"></i></a>
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fab fa-facebook fa-lg"></i></a>
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fab fa-instagram fa-lg"></i></a>
-    </div> -->
+    </div>
   </body>
 </html>
