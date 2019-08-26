@@ -50,8 +50,6 @@ h1 {
   }
 }
 
-/* AFTER BANNER */
-
 #logo {
   position: absolute;
   height: 50px;
@@ -59,43 +57,63 @@ h1 {
   top: 15px;
   left: 15px;
 }
+/* AFTER BANNER: TEXT*/
+
 
 #main-text {
   text-align: justify;
   padding: 30px;
 }
-#side-image {
-  /* float: right; */
-  /* width: 44%; */
+
+/* CAROUSEL */
+
+.carousel {
+  background: #EEE;
 }
 
-#first-image {
-  height: 100%;
-  width: 100%;
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #333;
 }
 
-/* @media(max-width: 700px){
-  #main-text {
-    padding: 30px;
-    text-align: justify;
-    width: auto;
-    float: none;
-  }
-  #side-image {
-    float: none;
-    width: auto;
-  }
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  #first-image {
-    height: 100%;
-    width: 100%;
+/* DOTS FUCK UP */
+@media(max-width: 989px){
+  .flickity-page-dots{
+    display: none;
   }
+}
+@media(max-width: 900px){
+  .carousel-cell {
+    height: 350px;
+  }
+}
 
-  #footer {
-    justify-content: center;
-    padding: 0px;
-  }
-} */
+/* IF WE WANT LAZY LOAD */
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+.flickity-page-dots, .flickity-prev-next-button{
+  display: none;
+}
+
 
 #footer {
   width: auto;
@@ -122,70 +140,9 @@ h1 {
   opacity: 1;
 }
 
-/* CAROUSEL */
-
-.carousel {
-  background: #EEE;
-}
-/*
-.carousel img {
-  display: block;
-  height: 200px;
-}
-
-@media screen and ( min-width: 768px ) {
-  .carousel img {
-    height: 400px;
-  }
-} */
-
-.carousel-cell {
-  width: 66%;
-  height: 400px;
-  margin-right: 10px;
-  background: #333;
-}
-
-.carousel-cell-image {
-  display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-@media(max-width: 989px){
-  .flickity-page-dots{
-    display: none;
-  }
-}
-@media(max-width: 900px){
-  .carousel-cell {
-    height: 350px;
-  }
-}
-/*
-@media(max-width: 800px){
-  .carousel-cell {
-    height: 300px;
-  }
-}
-
-
-@media(max-width: 700px){
-    .carousel-cell {
-    height: 250px;
-  }
-}
-
-@media(max-width: 600px){
-    .carousel-cell {
-    height: 200px;
+/* @media(max-width: 700px){
+  #footer {
+    justify-content: center;
+    padding: 0px;
   }
 } */
