@@ -9,7 +9,6 @@ html {
   width: 100%;
 }
 
-/* HEADER */
 h1 {
   color: #dfd4cfb5;
   margin-top: 0px;
@@ -58,30 +57,70 @@ h1 {
   left: 15px;
 }
 
-/* IMAGE AND TEXT */
-#main-content {
-  padding: 20px;
-  /* display: flex; */
-}
-
 #main-text {
-  padding: 20px;
   text-align: justify;
   width: 50%;
+  float: left;
+  padding: 3%;
 }
-/* #side-image {
-  flex: 50%;
-} */
+#side-image {
+  float: right;
+  width: 44%;
+}
+
+#first-image {
+  height: 100%;
+  width: 100%;
+}
+
+@media(max-width: 700px){
+  #main-text {
+    padding: 30px;
+    text-align: justify;
+    width: auto;
+    float: none;
+  }
+  #side-image {
+    float: none;
+    width: auto;
+  }
 
   #first-image {
-
     height: 100%;
     width: 100%;
   }
-// media query base on height AND width
-//color scheme
 
+  #footer {
+    justify-content: center;
+    padding: 0px;
+  }
+}
+
+#footer {
+  width: auto;
+  clear: both; /* Floats are weird huh? */
+  height: 30px;
+  background: linear-gradient(0, #8e8e8e94 10%, 51%, #F0FFFF ); /* ... */
+  display: flex;
+  align-items: center;
+  padding: 0 calc(3% - 8px);
+}
+
+#footer i{
+  opacity: 0.6;
+  padding: 0px 8px;
+}
+
+#footer a{
+  color: inherit;
+  text-decoration: none;
+}
+
+#footer i:hover{
+  opacity: 1;
+}
+
+//color scheme
 
 //Define text styles
 
-//Let's have fixed image dimensions
