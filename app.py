@@ -1,10 +1,12 @@
 from flask import Flask, render_template
+import os
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-  return render_template("home.html")
-  #return "<h1>Hello World</h1>"
+  images = os.listdir('static/images')
+  images = ['images/' + file for file in images]
+  return render_template("home.html", images = images)
 
 @app.route("/join")
 def join():
@@ -13,8 +15,8 @@ def join():
 @app.route("/upload")
 def upload():
   return "Please upload your photos here:"
-  
-   
+
+
 if __name__ == '__main__':
   app.run(debug=True, use_reloader=True)
 

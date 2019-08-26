@@ -124,3 +124,56 @@ h1 {
 
 //Define text styles
 
+/*
+.carousel {
+  background: #FAFAFA;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+} */
+
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 400px;
+  }
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
